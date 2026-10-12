@@ -1,0 +1,6 @@
+/lib/
+/.shards/
+/tmp/
+*.dwarf
+/hd
+/solid_queue

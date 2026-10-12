@@ -1,0 +1,15 @@
+sq_enqueue_rows	default|A|0|arguments=[1] exception_executions={} executions=0 job_class="A" locale="en" priority=nil queue_name="default" timezone=nil|sched:now|fin:false
+low|C|0|arguments=["x"] exception_executions={} executions=0 job_class="C" locale="en" priority=nil queue_name="low" timezone=nil|sched:now|fin:false
+default|B|0|arguments=[] exception_executions={} executions=0 job_class="B" locale="en" priority=nil queue_name="default" timezone=nil|sched:now|fin:false
+sq_scheduled_at	default|B|0|arguments=[] exception_executions={} executions=0 job_class="B" locale="en" priority=nil queue_name="default" timezone=nil|sched:2031-01-01T00:00:00Z|fin:false
+sq_claim_order	PrioA,PrioB,PrioC,A
+sq_claim_two_workers	9,10 11,12 disjoint:true
+sq_claim_queuelist	default:A,low:C
+sq_scheduled_not_ready	claimed:0 scheduled:1
+sq_scheduled_dispatch_due	dispatched:1 claimed:1
+sq_scheduled_order	2031-01-01T00:00:00Z,2031-01-02T00:00:00Z
+sq_perform_result	ok:true finished:true claimed_left:0 log:A:7
+sq_failure_and_retry	performed attempts:2 flaky_rows:2 finished:true
+sq_cron_next	2026-10-03T12:35:00Z,2026-10-03T12:35:00Z,2026-10-05T12:00:00Z,2026-11-01T02:30:00Z,2026-10-05T09:00:00Z,2026-10-04T04:05:00Z,2026-10-04T00:00:00Z,2026-10-03T13:00:00Z,nil
+sq_cron_prev	2026-10-03T12:34:00Z,2026-10-03T12:30:00Z,2026-09-28T12:00:00Z,2026-10-01T02:30:00Z,2026-10-02T17:00:00Z,2026-09-27T04:05:00Z,2026-10-03T00:00:00Z,2026-10-03T12:00:00Z,nil
+sq_recurring_task_enqueue	low|A|3|arguments=[1, "x"] exception_executions={} executions=0 job_class="A" locale="en" priority=3 queue_name="low" timezone=nil|sched:now|fin:false|run_at:2031-01-01T00:00:00Z|task:cache_sweeper|count:1

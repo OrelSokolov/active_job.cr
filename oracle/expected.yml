@@ -1,0 +1,28 @@
+dsl_queue_default	default
+dsl_queue_as	low
+dsl_queue_self	urgent
+dsl_priority	5
+dsl_queue_inherited	low
+now_result	done:1:2
+now_default_arg	done:only:
+now_not_enqueued	0
+later_enqueued	{"job_class" => "LogJob", "queue_name" => "default", "priority" => nil, "arguments" => ["x", 2], "executions" => 0, "exception_executions" => {}, "locale" => "en", "timezone" => nil, "scheduled_at" => nil, job: LogJob, args: ["x", 2], queue: "default", priority: nil}
+later_success	true
+later_executions	0
+later_set_queue	high
+later_set_priority	3
+later_set_wait	scheduled
+later_set_until	2030-01-01T00:00:00.000000000Z
+ser_primitives	["s", 1, 2.5, nil, true, [1, 2]]
+ser_symbol_keys	[{"a" => 1, "b" => 2, "_aj_symbol_keys" => ["a"]}]
+ser_date_time	[{"_aj_serialized" => "ActiveJob::Serializers::DateSerializer", "value" => "2026-01-02"}, {"_aj_serialized" => "ActiveJob::Serializers::TimeSerializer", "value" => "2026-01-01T12:00:00.000000000Z"}]
+ser_unsupported	raise:ActiveJob::SerializationError
+cb_perform_now	["before_perform", "around_in", "perform", "after_perform", "around_out"]
+cb_perform_later	["before_enqueue", "after_enqueue", "around_enqueue"]
+retry_returns_error	FlakyError
+retry_log	["try"]
+retry_enqueued	{"job_class" => "RetryJob", "queue_name" => "default", "priority" => nil, "arguments" => [1], "executions" => 1, "exception_executions" => {"[FlakyError]" => 1}, "locale" => "en", "timezone" => nil, "scheduled_at" => "TS", job: RetryJob, args: [1], queue: "default", priority: nil}
+retry_recover	recovered
+retry_exhausted	raise:FlakyError
+discard_returns_error	FlakyError
+deserialize_roundtrip	done:x:9
