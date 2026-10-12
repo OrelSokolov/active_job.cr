@@ -3,7 +3,8 @@ version: 0.1.0
 crystal: ">= 1.21.0"
 dependencies:
   active_support_cr:
-    path: ../active_support.cr
+    github: OrelSokolov/active_support.cr
+    version: ~> 0.1.0
   pg:
     github: will/crystal-pg
   redis:
